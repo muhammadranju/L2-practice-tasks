@@ -1,4 +1,3 @@
-"use strict";
 // const greetFriends = (...friends: string[]) => {
 //   friends.forEach((friend) => {
 //     console.log(`Hello, ${friend}!`);
@@ -114,4 +113,40 @@
 //     email:"x@gmail.com",
 //     devType:"NLWD"
 // })
-console.log("ts");
+// console.log("ts");
+// const getPropertyValue = <X, Y extends keyof X>(obj: X, key: Y) => {
+//   return obj[key];
+// };
+// const user = {
+//   name: "Ranju",
+//   email: "ranju@gmail.com",
+//   devType: "NLWD",
+// };
+// console.log(getPropertyValue(user, "devType"));
+// type Todo = {
+//   id: number;
+//   userId: number;
+//   title: string;
+//   completed: boolean;
+// };
+// const getTodo = async (): Promise<Todo> => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+//   const data = await res.json();
+//   return data;
+// };
+// console.log(getTodo());
+// class Animal {
+//   constructor(
+//     private name: string,
+//     private species: string,
+//     private sound: string
+//   ) {}
+//   private makeSound(): string {
+//     return `The ${this.name} makes ${this.sound}`;
+//   }
+//   public sayHello(): string {
+//     return this.makeSound();
+//   }
+// }
+// const dog = new Animal("Dog", "Dog", "Woof");
+// console.log(dog.sayHello());
