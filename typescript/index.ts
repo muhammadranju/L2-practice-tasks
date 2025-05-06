@@ -165,21 +165,21 @@
 // };
 
 // console.log(getTodo());
-// class Animal {
-//   constructor(
-//     private name: string,
-//     private species: string,
-//     private sound: string
-//   ) {}
+class Animal {
+  constructor(
+    private name: string,
+    private species: string,
+    private sound: string
+  ) {}
 
-//   private makeSound(): string {
-//     return `The ${this.name} makes ${this.sound}`;
-//   }
+  private makeSound(): string {
+    return `The ${this.name} makes ${this.sound}`;
+  }
 
-//   public sayHello(): string {
-//     return this.makeSound();
-//   }
-// }
+  public sayHello(): string {
+    return this.makeSound();
+  }
+}
 
 const dog = new Animal("Dog", "Dog", "Woof");
 
