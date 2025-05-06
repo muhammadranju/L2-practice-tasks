@@ -181,6 +181,6 @@
 //   }
 // }
 
-// const dog = new Animal("Dog", "Dog", "Woof");
+const dog = new Animal("Dog", "Dog", "Woof");
 
-// console.log(dog.sayHello());
+console.log(dog.sayHello());

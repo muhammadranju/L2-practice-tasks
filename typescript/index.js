@@ -148,5 +148,5 @@
 //     return this.makeSound();
 //   }
 // }
-// const dog = new Animal("Dog", "Dog", "Woof");
-// console.log(dog.sayHello());
+var dog = new Animal("Dog", "Dog", "Woof");
+console.log(dog.sayHello());
