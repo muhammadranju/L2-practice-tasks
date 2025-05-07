@@ -135,18 +135,19 @@
 //   return data;
 // };
 // console.log(getTodo());
-// class Animal {
-//   constructor(
-//     private name: string,
-//     private species: string,
-//     private sound: string
-//   ) {}
-//   private makeSound(): string {
-//     return `The ${this.name} makes ${this.sound}`;
-//   }
-//   public sayHello(): string {
-//     return this.makeSound();
-//   }
-// }
+var Animal = /** @class */ (function () {
+    function Animal(name, species, sound) {
+        this.name = name;
+        this.species = species;
+        this.sound = sound;
+    }
+    Animal.prototype.makeSound = function () {
+        return "The ".concat(this.name, " makes ").concat(this.sound);
+    };
+    Animal.prototype.sayHello = function () {
+        return this.makeSound();
+    };
+    return Animal;
+}());
 var dog = new Animal("Dog", "Dog", "Woof");
 console.log(dog.sayHello());
