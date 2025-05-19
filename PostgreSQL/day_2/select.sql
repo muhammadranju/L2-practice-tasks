@@ -7,10 +7,243 @@ CREATE TABLE students (
     grade CHAR(2),
     course VARCHAR(50),
     email VARCHAR(100),
-    dod DATE,
+    dob DATE,
     blood_group VARCHAR(5),
     country VARCHAR(50)
 );
+
+INSERT INTO
+    student (
+        first_name,
+        last_name,
+        age,
+        grade,
+        course,
+        email,
+        dob,
+        blood_group,
+        country
+    )
+VALUES (
+        'Alice',
+        'Johnson',
+        20,
+        'A',
+        'Computer Science',
+        'alice.johnson@example.com',
+        '2004-01-15',
+        'A+',
+        'USA'
+    ),
+    (
+        'Bob',
+        'Smith',
+        22,
+        'B',
+        'Mathematics',
+        'bob.smith@example.com',
+        '2002-03-22',
+        'O-',
+        'Canada'
+    ),
+    (
+        'Charlie',
+        'Brown',
+        19,
+        'C',
+        'Physics',
+        'charlie.brown@example.com',
+        '2005-07-10',
+        'B+',
+        'UK'
+    ),
+    (
+        'Diana',
+        'White',
+        21,
+        'A',
+        'Biology',
+        'diana.white@example.com',
+        '2003-11-08',
+        'AB-',
+        'Australia'
+    ),
+    (
+        'Ethan',
+        'Black',
+        20,
+        'B',
+        'Engineering',
+        'ethan.black@example.com',
+        '2004-04-30',
+        'O+',
+        'India'
+    ),
+    (
+        'Fiona',
+        'Green',
+        18,
+        'A',
+        'English Literature',
+        'fiona.green@example.com',
+        '2006-06-18',
+        'A-',
+        'Ireland'
+    ),
+    (
+        'George',
+        'Lee',
+        23,
+        'C',
+        'History',
+        'george.lee@example.com',
+        '2001-02-27',
+        'B-',
+        'USA'
+    ),
+    (
+        'Hannah',
+        'Adams',
+        19,
+        'B',
+        'Chemistry',
+        'hannah.adams@example.com',
+        '2005-09-14',
+        'AB+',
+        'New Zealand'
+    ),
+    (
+        'Ian',
+        'Clark',
+        22,
+        'A',
+        'Economics',
+        'ian.clark@example.com',
+        '2002-12-01',
+        'A+',
+        'Germany'
+    ),
+    (
+        'Julia',
+        'Martin',
+        20,
+        'B',
+        'Psychology',
+        'julia.martin@example.com',
+        '2004-05-06',
+        'O-',
+        'France'
+    ),
+    (
+        'Kevin',
+        'Walker',
+        21,
+        'C',
+        'Political Science',
+        'kevin.walker@example.com',
+        '2003-08-21',
+        'B+',
+        'Brazil'
+    ),
+    (
+        'Laura',
+        'Hall',
+        18,
+        'A',
+        'Philosophy',
+        'laura.hall@example.com',
+        '2006-01-11',
+        'AB-',
+        'South Africa'
+    ),
+    (
+        'Mike',
+        'Allen',
+        19,
+        'B',
+        'Art',
+        'mike.allen@example.com',
+        '2005-03-19',
+        'O+',
+        'USA'
+    ),
+    (
+        'Nina',
+        'Scott',
+        22,
+        'A',
+        'Nursing',
+        'nina.scott@example.com',
+        '2002-10-03',
+        'A-',
+        'India'
+    ),
+    (
+        'Oscar',
+        'Young',
+        20,
+        'C',
+        'Music',
+        'oscar.young@example.com',
+        '2004-07-25',
+        'B-',
+        'UK'
+    ),
+    (
+        'Paula',
+        'King',
+        21,
+        'B',
+        'Architecture',
+        'paula.king@example.com',
+        '2003-12-12',
+        'AB+',
+        'Canada'
+    ),
+    (
+        'Quentin',
+        'Wright',
+        23,
+        'A',
+        'Statistics',
+        'quentin.wright@example.com',
+        '2001-11-17',
+        'A+',
+        'Australia'
+    ),
+    (
+        'Rachel',
+        'Lopez',
+        19,
+        'C',
+        'Law',
+        'rachel.lopez@example.com',
+        '2005-06-09',
+        'O-',
+        'Mexico'
+    ),
+    (
+        'Sam',
+        'Perez',
+        18,
+        'B',
+        'Environmental Science',
+        'sam.perez@example.com',
+        '2006-02-05',
+        'B+',
+        'Spain'
+    ),
+    (
+        'Tina',
+        'Nguyen',
+        20,
+        'A',
+        'Sociology',
+        'tina.nguyen@example.com',
+        '2004-09-23',
+        'AB-',
+        'Vietnam'
+    );
 
 INSERT INTO
     students (
@@ -246,4 +479,10 @@ INSERT INTO
 
 SELECT * FROM students;
 
--- SELECT * FROM students WHERE first_name = 'John';
+SELECT * FROM student
+
+SELECT * FROM student WHERE country NOT IN ('UK');
+
+SELECT * FROM student WHERE country IN ('UK', 'USA');
+
+SELECT * FROM student WHERE age BETWEEN 15 AND 18;
