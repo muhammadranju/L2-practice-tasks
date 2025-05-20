@@ -14,6 +14,7 @@ app.get("/users", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
 app.post("/users", async (req, res) => {
   try {
     const { id, name, city } = req.body;
@@ -26,6 +27,7 @@ app.post("/users", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
 app.put("/users/:id", async (req, res) => {
   try {
     const { name, city } = req.body;
