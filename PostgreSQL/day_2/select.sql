@@ -481,7 +481,7 @@ SELECT * FROM students;
 
 SELECT * FROM student
 
-SELECT * FROM student WHERE country NOT IN ('UK');
+SELECT * FROM student WHERE country NOT IN('UK');
 
 SELECT * FROM student WHERE country IN ('UK', 'USA');
 
