@@ -106,3 +106,30 @@ db.practice.aggregate([
     $group: { _id: "$age", interestsPerAge: { $push: "$interests" } },
   },
 ]);
+
+db.practice.aggregate([
+  {
+    $bucket: {
+      groupBy: "$age",
+      boundaries: [20, 40, 60, 80],
+      default: "Other",
+      output: {
+        count: { $sum: 1 },
+        names: { $push: "$name" },
+      },
+    },
+  },
+  {
+    $sort: {
+      count: -1,
+    },
+  },
+  {
+    $limit: 10,
+  },
+  {
+    $project: {
+      count: 1,
+    },
+  },
+]);
