@@ -75,3 +75,25 @@ db.practice.aggregate([
     },
   },
 ]);
+
+db.practice.aggregate([
+  {
+    $group: {
+      _id: null,
+
+      totalSalary: { $sum: "$salary" },
+      maxSalary: { $max: "$salary" },
+      minSalary: { $min: "$salary" },
+      avgSalary: { $avg: "$salary" },
+    },
+  },
+  {
+    $project: {
+      Total_Salary: "$totalSalary",
+      Average_Salary: "$avgSalary",
+      Maximum_Salary: "$maxSalary",
+      Minimum_Salary: "$minSalary",
+      Subtraction_Salary: { $subtract: ["$maxSalary", "$minSalary"] },
+    },
+  },
+]);
