@@ -22,6 +22,56 @@ async () => {
 };
 
 db.practice.aggregate([
-  { $match: { gender: "Male", age: { $lt: 30 } } },
-  { $project: { name: 1, age: 1, gender: 1 } },
+  {
+    $match: {
+      gender: "Male",
+      age: { $lt: 30 },
+    },
+  },
+  {
+    $project: {
+      name: 1,
+      age: 1,
+      gender: 1,
+    },
+  },
+]);
+
+db.practice.aggregate([
+  {
+    $match: {
+      gender: "Male",
+      age: { $lt: 30 },
+    },
+  },
+  {
+    $addFields: {
+      course: "Level-2",
+    },
+  },
+  {
+    $project: {
+      name: 1,
+      age: 1,
+      gender: 1,
+      course: 1,
+    },
+  },
+]);
+
+db.practice.aggregate([
+  {
+    $group: {
+      _id: "$address.country",
+      count: { $sum: 1 },
+      users: { $push: "$$ROOT" },
+    },
+  },
+  {
+    $project: {
+      "users.name": 1,
+      "users.email": 1,
+      "users.phone": 1,
+    },
+  },
 ]);
