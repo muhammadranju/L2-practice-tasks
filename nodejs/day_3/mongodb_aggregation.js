@@ -97,3 +97,12 @@ db.practice.aggregate([
     },
   },
 ]);
+
+db.practice.aggregate([
+  {
+    $unwind: "$interests",
+  },
+  {
+    $group: { _id: "$age", interestsPerAge: { $push: "$interests" } },
+  },
+]);
