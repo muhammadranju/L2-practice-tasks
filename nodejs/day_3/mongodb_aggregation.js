@@ -133,3 +133,15 @@ db.practice.aggregate([
     },
   },
 ]);
+
+db.practice
+  .find(
+    {
+      gender: "Female",
+      age: { $nin: [18, 20, 22, 24, 26, 28, 30] },
+      interests: { $in: ["Cooking", "Gaming"] },
+    },
+
+    { age: 1, gender: 1, interests: 1 }
+  )
+  .sort({ age: 1 });
