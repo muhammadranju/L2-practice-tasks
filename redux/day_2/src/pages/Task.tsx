@@ -1,6 +1,7 @@
 import { AddTaskModal } from "@/components/module/tasks/AddTaskModal";
 import TaskCard from "@/components/module/tasks/TaskCard";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useGetTasksQuery } from "@/redux/api/baseApi";
 import { selectTasks, updateFilter } from "@/redux/features/task/taskSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 
@@ -8,6 +9,8 @@ const Task = () => {
   const tasks = useAppSelector(selectTasks);
   console.log(tasks);
   const dispatch = useAppDispatch();
+
+  const { data, isLoading, isError } = useGetTasksQuery(undefined);
 
   return (
     <div className="mx-auto max-w-7xl px-5 mt-20">
